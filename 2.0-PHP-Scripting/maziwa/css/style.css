@@ -1,0 +1,269 @@
+/* ===============
+   Fonts [Web Fonts]
+   =============== */
+
+/* === Method 1 : using @import === */
+/*Rubik*/
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap');
+
+/*Karla*/
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
+/* === Method 2 , using @font-face === */
+@font-face {
+  font-family: 'Satisfy';
+  /*Format for modern browsers*/
+  src : url('fonts/Satisfy/Satisfy-Regular.ttf') format('truetype');
+}
+
+html{
+  /*Set the font-size of our html - important since we will be using em units*/
+  font-size : 16px;
+}
+
+/* ===============
+   Body style
+   =============== */
+
+body{
+  font-family: 'Karla',sans-serif;
+
+  /*Sets the height of a line box*/
+  line-height: 1.5;
+
+  padding: 0;
+
+  margin: 0;
+
+  background-color: #f4f4f4;
+}
+
+/* ===============
+   Global styles
+   =============== */
+
+#container{
+  display : grid;
+  grid-template-rows: 75px auto 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "hd hd hd"
+                        "cnt cnt cnt"
+                        "ft ft ft";
+}
+
+
+/*Why will this not work for all the styles applied?*/
+#logo{
+  font-family: 'Satisfy',cursive; /*font stack*/
+
+  /*Setting the right margin on the logo item to auto moves the extra space to the right of the logo,
+  pushing the remaining items all the way to the right (the “main end”).*/
+
+  margin-right: auto;
+
+}
+
+#logo-image{
+  padding-top: 10px;
+  display: inline;
+  width : 50px;
+}
+
+/*child selector - only targets direct child */
+#logo > h1{
+  display: inline;
+  font-weight: normal;
+  font-size: 1.7rem;
+}
+
+
+/* ===============
+   Header
+   =============== */
+
+header{
+
+  grid-area: hd;
+
+  /* hex color code [RR-GG-BB]1F9499 743c25
+
+  background: #743c25;
+  */
+
+
+  /*
+  https://cssgradient.io/
+  */
+  background: radial-gradient(circle, rgba(116,60,37,1) 0%, rgba(116,60,37,1) 35%, rgba(255,255,255,1) 100%);
+
+  color: #ffffff; /* #ffffff or #fff or white */
+
+  /*the em unit means "my parent element's font-size".
+
+  padding-top: 1em;
+
+  /*It prevents the used value of the height property from
+  becoming smaller than the value specified for min-height.*/
+
+  min-height: 1em;
+
+  border-bottom: 3px solid #006838;
+
+}
+
+/* ID Selector */
+#menu {
+  /*Turn our navigation ul into a flex container*/
+
+  display: flex;
+
+  /*Set the direction of flow -- our main axis is horizontal*/
+
+  flex-direction: row;
+
+  /*Allow menu items to flow over? -- Nor neccesary since we only have three*/
+
+  flex-wrap: nowrap;
+
+  /*Combining the two lines above
+  flex-flow: row nowrap;  */
+
+  /*defines how extra space should be distributed
+    around or between items that are inflexible or have reached their maximum size
+    justify-content : center;
+
+
+  /*align items - remember this applies to the cross-axis*/
+
+  align-items: center;
+
+  margin: 0;
+
+  /*Remove the list-style(bullets)*/
+  list-style: none;
+
+  font-family: 'Rubik', sans-serif;
+
+  font-weight: 500;
+
+}
+
+
+/* ===============
+   Menu Items (links)
+   =============== */
+
+/*Descendant selector - targets elements that are contained within other elements*/
+#menu a{
+
+  /*Change to a block item*/
+  display: block;
+
+  /*Add a border around the link tag*/
+  background: #6a4a24;
+  color : white;
+
+  /*Rounded borders*/
+  border-radius: .5em;
+
+  /*Add top & bottom, left & right padding*/
+  padding: .5em 1em;
+
+  /*Add margin after the borde*/
+  margin: .5em;
+
+  /*Remove link underline*/
+  text-decoration: none;
+}
+
+#menu a:hover{
+  border-bottom: 3px solid black;
+  color : #d4854d;
+}
+
+li.active a{
+  border-bottom: 3px solid black;
+  color : #e4855f !important;
+}
+
+
+/* ===============
+   Main
+   =============== */
+
+main{
+  grid-area: cnt;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+main #showcase {
+  margin-top : 10px;
+  min-height: 400px;
+  background:url('../images/banner.jpg') no-repeat center;
+  background-size: auto;
+}
+
+/* ===============
+   Boxes
+   =============== */
+
+#boxes{
+  width : 100%;
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.box{
+  width : 32%;
+  margin-left : 6px;
+  margin-right : 6px;
+}
+
+.box > img{
+  padding-top : 20px;
+}
+
+
+/* ===============
+   Footer
+   =============== */
+
+footer{
+  grid-area: ft;
+  margin: 0;
+  padding : 0;
+  color: #ffffff;
+  /* 683700 - brownish */
+  background-color: #743c25;
+  text-align: center;
+}
+
+/* ===============
+   About page
+   =============== */
+
+
+
+/* ===============
+   Contact page
+   =============== */
+
+
+
+   
+/* ===============
+   Responsive styles
+   =============== */
+@media (min-width: 1100px){
+  main #showcase {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 970px) {
+  .box{
+    width : 100%;
+  }
+}
