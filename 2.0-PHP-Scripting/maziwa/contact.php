@@ -618,7 +618,7 @@
                         <textarea name="message" id="message" cols="30" rows="10"></textarea>
 
                     </div>
-                    <button type="submit" >Submit</button>
+                    <button type="submit" name="submit" value="submit">Submit</button>
 
 
                 </form>
