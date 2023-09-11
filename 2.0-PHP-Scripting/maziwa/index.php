@@ -70,7 +70,12 @@
       </main>
 
       <footer>
-        <p>Maziwa Limited, Copyright &copy; 2020</p>
+        <p>Maziwa Limited, Copyright &copy;
+           <?php  
+           echo date('Y'); 
+           //primitive types . simple data types(integers,strings,boolean) 
+           ?>
+           </p><!-- 2020 -->
       </footer>
     </div>
   </body>
