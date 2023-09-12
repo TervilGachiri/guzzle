@@ -13,6 +13,10 @@
  //1.Get the data
  //there is some data
  //it is a POST instead of a GET
+
+ //@TODO #5 : Data and input
+ //@TODO #6 : Validation
+ //@TODO #7 : Send back messages
  
 
  //superglobals, predefined/Built-in-variables
@@ -35,7 +39,7 @@
 
     //3.store the data in a database table
     //3.1 make a database connection
-    $db=mysqli_connect('localhost','api_user','api_user','class_db');
+    $db=mysqli_connect("localhost","api_user","api_user","class_db");
 
     $db=mysqli_connect('localhost','root','','class_db');
 
@@ -46,7 +50,7 @@
     //}
 
     #sql = "INSERT INTO contact('name', 'email','country','contact_date','phone','message') 
-    VALUES('$name','#email','$country','$today','$phone','$message')
+    VALUES("$name","#email","$country","$today","$phone","$message");
 
     //$string1 = "Nganga";
     //$string1 = " John said ,"I tell you" ';
@@ -55,7 +59,7 @@
 
 
     //insert data
-    mysqli_query($db,$sql)
+    mysqli_query($db,$sql);
 
     //4.Return a success mssage to the user
     echo "Your message has been received";
