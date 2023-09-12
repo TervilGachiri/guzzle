@@ -36,10 +36,12 @@
     $today = date("Y-m-d H:i:s"); //2023.09.11 12:27:37//gives us my sql datetime format for today/now
 
     //2.Validation
+    //make sure the format of what we expect is adhered to
+    //for example , a name should be a name ie.there are no names that start with numbers
 
     //3.store the data in a database table
     //3.1 make a database connection
-    $db=mysqli_connect('localhost','api_user','api_user','class_db');
+    $db = mysqli_connect('localhost','api_user','api_user','class_db');
 
     $db=mysqli_connect('localhost','root','','class_db');
 
