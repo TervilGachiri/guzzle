@@ -67,10 +67,10 @@ if (isset($_POST['submit']) && $_POST['submit'] == "submit") {
    
 //die();
 
-      //$string1 = "Nganga";
-      // $string1 = " John said ,"I tell you" ';
-      // $string1 = Ng'ang'a";
-      // $string1 = Ng\'ang\"a";
+      //$string1 =. "Nganga";
+      // $string1 =. " John said ,"I tell you" ';
+      // $string1 =. Ng'ang'a";
+      // $string1 =. Ng\'ang\"a";
 
 
       //insert data
