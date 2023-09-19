@@ -1,5 +1,9 @@
 <?php
+//insert or require or include the db.php file here
 
+require_once 'db.php';
+// require,include or include_once
+//@TODO : Find out the differences 
 /**
  * Handle all database operations
  * 
@@ -44,8 +48,6 @@ if (isset($_POST['submit']) && $_POST['submit'] == "submit") {
       //3.1 make a database connection
       $db = mysqli_connect('localhost', 'api_user', 'api_user', 'class_db');
 
-      $db = mysqli_connect('localhost', 'root', '', 'class_db');
-
       //if(mysqli_connect_error () ){
       //    // String operation - joining of strings or concatenation .(dot opearator)
       //    die("Database connection failed!" .mysqli_connect_error () );
@@ -67,12 +69,11 @@ if (isset($_POST['submit']) && $_POST['submit'] == "submit") {
         //echo $sql;/
    
 //die();
-   
-   
-     //$string1 = "Nganga"; 
-     //$string1 = ' John said ,"I tell you" ';
-     //$string1 = "Ng'ang'a";
-     //$string1 = "Ng\"ang\"a";
+
+     // $string1 = "Nganga"; 
+     // $string1 = ' John said ," I tell you" ';
+     // $string1 = "Ng'ang'a";
+     // $string1 = "Ng\"ang\"a";
 
 
       //insert data
