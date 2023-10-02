@@ -61,7 +61,7 @@
 
 
  //creating an object of type database
- $db = new Database();
+// $db = new Database();
 
  //how do we access the database connection
- var_dump($db->connection);
+ //var_dump($db->connection);
