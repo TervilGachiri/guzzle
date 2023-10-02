@@ -1,10 +1,21 @@
 <?php
+namespace Database;
+
+//@TODO: Advantages of using aliases in phpException
+//Code Readability and Conciseness
+//Code Maintenance
+//Easier Migration
+//Namespace Management
+use \Exception as Exp;
+use \mysqli as Mysqli;
+
+//default namespace \(root namespace)
 /**
- * Connect to the database
+ * Database class
  */
 
  //define constants for database connection(credentials)
- define('DB_HOST', 'localhost');
+ define('DB_HOST', 'localhost');   
  define('DB_PORT', '3306');
  define('DB_USER', 'api_user');//root
  define('DB_PASS', 'api_user');//**
@@ -38,7 +49,7 @@
     try{
 
          //create the database connection
-         $this->connection = new mysqli($this->host,$this->port,$this->user,$this->password,$this->dbname);
+         $this->connection = new Mysqli($this->host,$this->port,$this->user,$this->password,$this->dbname);
 
          //check whether the connection was established
          if($this->connection->connect_error){
@@ -48,7 +59,7 @@
 
 
     //check for errors
-    }catch(Exception $e){
+    }catch(Exp $e){
          echo "Something went wrong"; //what the user see's
          //logging (for you as a developer)
          //var_dump($e->get Message());
@@ -65,3 +76,16 @@
 
  //how do we access the database connection
  //var_dump($db->connection);
+
+ //@TODO #12: Advantages of Modular design in system development
+ //Maintenance and Debugging
+ //Scalability
+ //Reusability
+ //Ease of Development
+
+ //@TODO #11: Advantages of using namespaces in phpmilk
+ //Improved Code Organization
+// Enhanced Readability
+ //Preventing Naming Conflicts
+// Simplified Autoloading
+// Facilitating Code Reusability
