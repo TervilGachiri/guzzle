@@ -13,7 +13,7 @@ class Employee extends Staff{
         parent::__construct();
 
         //initialize the two variable accordingly
-        $this->role = "employee";
+        $this->role ="employee";
         $this->jobtitle = $this->shortBio;
     }
 
