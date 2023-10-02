@@ -41,4 +41,4 @@ class Staff{
 
 //an object named person of type Staff
 //a Staff object named person 
-$person = new Staff();
+//$person = new Staff();
