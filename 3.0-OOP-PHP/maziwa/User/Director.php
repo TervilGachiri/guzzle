@@ -16,7 +16,7 @@ class Director extends Staff {
         parent::__construct();
 
         //initialize our properties
-        $this->role ='director';
+        $this->role = 'director';
 
    }
 
