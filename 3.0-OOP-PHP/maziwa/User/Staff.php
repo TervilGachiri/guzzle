@@ -5,7 +5,7 @@ namespace  User;
 //require_once '../Classloader.php';
 
 
-//aliasing 
+//aliasing  
 use \Database\Database as Database;
 
 class Staff{
