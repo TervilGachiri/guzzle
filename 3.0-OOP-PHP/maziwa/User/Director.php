@@ -8,7 +8,7 @@ class Director extends Staff {
 
     public $linkedIn;
     public $userImage;
-    public $role;
+    public  $role;
 
     public function __construct() {
 
