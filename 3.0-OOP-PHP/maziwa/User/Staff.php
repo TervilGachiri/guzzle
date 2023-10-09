@@ -2,7 +2,7 @@
 namespace  User;
 
 //include our class loader
-require_once '../Classloader.php';
+//require_once '../Classloader.php';
 
 
 //aliasing 
@@ -19,10 +19,14 @@ class Staff{
     protected $role;
     protected $employmentDate;
     protected $status;
+    protected $db;
 
     public function __construct(){
         //get the database connection
-        $db = new \Database\Database();
+        $db = new Database();
+
+        //initializea class property of Staff to hold the database connection
+        $this->db = $db;
     }
 }
 
