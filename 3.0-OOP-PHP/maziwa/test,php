@@ -7,7 +7,7 @@ require 'Classloader.php';
 $director1 = new User\Director();
 
 //calling the getAll method
-$director1->getAll();
+$director1->getAll() ;
 
 foreach($director1->getAll() as $key => $value);
 
