@@ -116,6 +116,7 @@ require_once 'Classloader.php';
                    
                    </tr>
 
+                   
               <?php  endforeach; 
 
               //simulate getting all directors
