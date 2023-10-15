@@ -20,6 +20,8 @@ class Director extends Staff {
 
    }
 
+
+   
    /**
      * A method that gets all directors
      */
