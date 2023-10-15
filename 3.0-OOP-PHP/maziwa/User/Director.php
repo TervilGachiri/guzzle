@@ -23,7 +23,7 @@ class Director extends Staff {
      * Get all staff who are directors
      */
     public function getDirectors(){
-           return $this->getAll($this->role);
+           return $this->getAll($this->role);B - 09_10_2023
            // return $this->getAll('director');
     }
 
