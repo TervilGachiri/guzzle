@@ -4,6 +4,7 @@ namespace  User;
 //require_once '../Classloader.php';
 
 class Employee extends Staff{
+    
 
     public $role;
     public $jobtitle;
