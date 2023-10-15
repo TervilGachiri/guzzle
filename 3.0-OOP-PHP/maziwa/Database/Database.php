@@ -15,6 +15,7 @@ use \mysqli as Mysqli;
  * Database class
  */
 
+
  //define constants for database connection(credentials)
  define('DB_HOST', 'localhost');   
  define('DB_PORT', '3306');
