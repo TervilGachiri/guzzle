@@ -9,6 +9,7 @@ class Director extends Staff {
     public $linkedIn;
     public $userImage;
     public $role;
+    
 
     public function __construct() {
 
@@ -21,7 +22,7 @@ class Director extends Staff {
    }
 
 
-   
+
    /**
      * A method that gets all directors
      */
