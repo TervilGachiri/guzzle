@@ -19,16 +19,44 @@ class Staff{
     protected $role;
     protected $employmentDate;
     protected $status;
-    protected $db;
+    protected $connection; // a class properties
 
     public function __construct(){
         //get the database connection
-        $db = new Database();
-
-        //initializea class property of Staff to hold the database connection
-        $this->db = $db;
+        $db = new Database(); //[scope of variables]
+        //initialising the connection properties to hold the database connection connection from the database class
+        $this->connection = $db->connection;
     }
-}
+    /**
+     * Geta all the records from the staff table and can be based on the user type
+     * parameters - mandatory vs optional
+     * getAll()
+     * getAll(1)
+     * getAll(1,'employee')
+     */
+    public function getAll($role='all') {
+
+        //connection
+
+        //query
+        $sql="SELECT * FROM staff WHERE status=1";
+
+        if($role1='all')
+           $sql = $sql . " AND role='$role'";
+
+         /*
+              line 43 to 44 is equivalent to 
+              if($role1=='all'){
+                $sql = $sql . " AND role'$role' ";
+              }
+        */
+        
+        //execute & return results
+         return $this->connection->query($sql);
+
+        //get the results
+    }
+}   
 
 //@TODO #15:  Advantages of PHP Autoloading
 //Reduces Redundancy and Boilerplate Code

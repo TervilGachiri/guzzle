@@ -16,6 +16,10 @@ class Employee extends Staff{
         $this->role ="employee";
         $this->jobtitle = $this->shortBio;
     }
+     public function getEmployees(){
+         return $this->getAll($this->role);
+        // return $this->getAll('employees');
+     }
 
 }
 //create a test object

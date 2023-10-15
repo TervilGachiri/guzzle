@@ -1,6 +1,6 @@
 <?php
 //add required files
-require_once 'db.php';
+require_once 'C;lassloader.php';
 
 //@TODO : Find out the differences require, require_once , include, include_once
 //Use require_once() to load dependencies (classes, functions, constants). Use require() to load template-like files. Use include_once() to load optional dependencies (classes, functions, constants). Use include() to load optional template-like files
@@ -77,12 +77,13 @@ require_once 'db.php';
                 </tr>
 
                 <?php
+                    //require_once 'User/Employee.php';
 
-                  //2. the query
-                  #sql = 'SELECT * FROM staff WHERE role='employee' AND status=1"; //decide and status=1
-                  //3. execute the query
-                  //4. get the result
-                  $results = mysqli_query($db,$sql);
+                // Create an object of type employee
+                $employees = new Use\Employee();
+
+                //call all method getEmployees to return all staff who are employees
+                $results = $employees->getEmployees();
 
                   //5. display the data as a table
                   foreach($results as $position => $row ){
@@ -118,8 +119,18 @@ require_once 'db.php';
                    
                    </tr>
 
-              <?php  endforeach; ?>
+              <?php  endforeach; 
 
+              //mock of getting all directors
+              $directors =  new User\Director();
+              $results = $directors->getDirectors();
+
+              foreach($results as $result){
+                echo $results['lname']; '<br>';
+              }
+
+
+              ?>
           </table>
 
       </section>
