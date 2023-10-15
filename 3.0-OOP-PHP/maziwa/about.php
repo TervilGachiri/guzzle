@@ -115,8 +115,9 @@ require_once 'Classloader.php';
                    <td> <?=$yos?> </td>
                    
                    </tr>
-
                    
+
+
               <?php  endforeach; 
 
               //simulate getting all directors
