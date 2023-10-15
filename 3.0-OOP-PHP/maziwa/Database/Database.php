@@ -10,6 +10,7 @@ use \Exception as Exp;
 use \mysqli as Mysqli;
 
 
+
 //default namespace \(root namespace)
 /**
  * Database class
