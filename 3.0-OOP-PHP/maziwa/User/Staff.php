@@ -41,6 +41,7 @@ class Staff{
      * getAll();
      * getAll('Employee);
      * 
+     * 
      * @return : A MySQLi resultset
      */
     public function getAll($role='all') {
