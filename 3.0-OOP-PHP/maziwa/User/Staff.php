@@ -9,6 +9,7 @@ namespace  User;
 use \Database\Database as Database;
 
 class Staff{
+    
 
     protected $id;
     protected $lastname;
@@ -50,7 +51,7 @@ class Staff{
                 $sql = $sql . " AND role'$role' ";
               }
         */
-        
+
         //execute & return results
          return $this->connection->query($sql);
 
