@@ -6,6 +6,7 @@ namespace  User;
 class Employee extends Staff{
     
 
+
     public $role;
     public $jobtitle;
 
