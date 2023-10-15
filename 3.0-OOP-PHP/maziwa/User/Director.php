@@ -19,12 +19,12 @@ class Director extends Staff {
         $this->role = 'director';
 
    }
+
    /**
-     * Get all staff who are directors
+     * A method that gets all directors
      */
     public function getDirectors(){
-           return $this->getAll($this->role);B - 09_10_2023
-           // return $this->getAll('director');
+           return $this->getAll($this->role);
     }
 
 }

@@ -1,7 +1,7 @@
 <?php
 namespace  User;
 //include for autoloader
-require_once '../Classloader.php';
+//require_once '../Classloader.php';
 
 class Employee extends Staff{
 
@@ -16,10 +16,11 @@ class Employee extends Staff{
         $this->role ="employee";
         $this->jobtitle = $this->shortBio;
     }
-    
+     /**
+     * A method that returns all employees
+     */
      public function getEmployees(){
-         return $this->getAll($this->role);
-        // return $this->getAll('employees');
+         return $this->getAll($this->role); 
      }
 
 }

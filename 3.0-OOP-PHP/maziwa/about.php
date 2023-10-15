@@ -1,6 +1,6 @@
 <?php
-//add required files
-require_once 'C;lassloader.php';
+//add required files - our classloader file
+require_once 'Classloader.php';
 
 //@TODO : Find out the differences require, require_once , include, include_once
 //Use require_once() to load dependencies (classes, functions, constants). Use require() to load template-like files. Use include_once() to load optional dependencies (classes, functions, constants). Use include() to load optional template-like files
@@ -77,13 +77,10 @@ require_once 'C;lassloader.php';
                 </tr>
 
                 <?php
-                    //require_once 'User/Employee.php';
+                  $employeesObject = new User\Employees();
+                  //require "User/Employee.php"
 
-                // Create an object of type employee
-                $employees = new Use\Employee();
-
-                //call all method getEmployees to return all staff who are employees
-                $results = $employees->getEmployees();
+                  $results = $employeesObject->getEmployees();  
 
                   //5. display the data as a table
                   foreach($results as $position => $row ){
@@ -121,12 +118,13 @@ require_once 'C;lassloader.php';
 
               <?php  endforeach; 
 
-              //mock of getting all directors
+              //simulate getting all directors
               $directors =  new User\Director();
-              $results = $directors->getDirectors();
+              $allDirectors = $directors->getDirectors();
+              
 
-              foreach($results as $result){
-                echo $results['lname']; '<br>';
+              foreach($allDirectors as $director){
+                echo $director['lname']; '<br>';
               }
 
 

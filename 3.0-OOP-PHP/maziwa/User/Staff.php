@@ -9,7 +9,7 @@ namespace  User;
 use \Database\Database as Database;
 
 class Staff{
-    
+
 
     protected $id;
     protected $lastname;
@@ -24,39 +24,55 @@ class Staff{
 
     public function __construct(){
         //get the database connection
-        $db = new Database(); //[scope of variables]
-        //initialising the connection properties to hold the database connection connection from the database class
+        $this ->connection = new Database(); //variable scope (visibility of variables) .function scope/local scope
+
+        //assign the class property called connection to hold the database connection
         $this->connection = $db->connection;
     }
     /**
-     * Geta all the records from the staff table and can be based on the user type
-     * parameters - mandatory vs optional
-     * getAll()
-     * getAll(1)
-     * getAll(1,'employee')
+     * A method that retrieves all the active staff from the database
+     * This method can also return a subset of the  staff given the role i.e Employee or Director
+     * 
+     * $role . signifies the staff roles that we would like to return
+     * for example $role=All, $role=Director, $role=Employee
+     * 
+     * 
+     * example of calling the function
+     * getAll();
+     * getAll('Employee);
+     * 
+     * @return : A MySQLi resultset
      */
     public function getAll($role='all') {
+         
+        //connect
+        $ourConnection = $this->connection
+        //query (Sql statement)
+        $sql = "SELECT * FROM staff WHERE status=1"; //this query will give us ALL  staff
 
-        //connection
+        //if the role is specific i.e. Employee or Director etc...then we specify the query
+        //specifically we add an additional condition
+        if($role != 'All') {
+            //SELECT * FROM staff WHERE status = 1 AND role='Employee'      
+            $sql = $sql . " AND role='$role'"; //
+        }
+        if($role != 'All') {
+            $sql = "SELECT * FROM staff WHERE status=1"; //this query will give us ALL  staff
+        }else{
+            $sql = "SELECT * FROM staff WHERE status=1"; //this query will give us ALL  staff 
+        }
 
-        //query
-        $sql="SELECT * FROM staff WHERE status=1";
+        //execute it and assign the result to a variable (execute and get the result)
+        $results = $ourConnection->query($sql);
 
-        if($role1='all')
-           $sql = $sql . " AND role='$role'";
+        //return the results
+        return $results;
 
-         /*
-              line 43 to 44 is equivalent to 
-              if($role1=='all'){
-                $sql = $sql . " AND role'$role' ";
-              }
-        */
 
-        //execute & return results
-         return $this->connection->query($sql);
 
-        //get the results
     }
+
+    //optional arguments for functions
 }   
 
 //@TODO #15:  Advantages of PHP Autoloading
