@@ -1,0 +1,18 @@
+<?php
+//include our classloader file so that when we create an object (on line 6),
+//our classloader file will automatically require User\Director.php class file
+require 'Classloader.php';
+
+//creating an object
+$director1 = new User\Director();
+
+//calling the getAll method
+$director1->getAll() ;
+
+foreach($director1->getAll() as $key => $value);
+
+      echo $value['lname'],'<br>';
+
+endforeach;
+
+

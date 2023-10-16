@@ -4,19 +4,19 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInita905f6cf1905e2ed530f6ff33c1e88a4
+class ComposerStaticInit7826e0a54338be7fa7ec8c875f01685f
 {
     public static $prefixLengthsPsr4 = array (
-        'M' => 
+        'R' => 
         array (
-            'Medoo\\' => 6,
+            'RedBeanPHP\\' => 11,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Medoo\\' => 
+        'RedBeanPHP\\' => 
         array (
-            0 => __DIR__ . '/..' . '/catfan/medoo/src',
+            0 => __DIR__ . '/..' . '/gabordemooij/redbean/RedBeanPHP',
         ),
     );
 
@@ -27,9 +27,9 @@ class ComposerStaticInita905f6cf1905e2ed530f6ff33c1e88a4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInita905f6cf1905e2ed530f6ff33c1e88a4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInita905f6cf1905e2ed530f6ff33c1e88a4::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInita905f6cf1905e2ed530f6ff33c1e88a4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit7826e0a54338be7fa7ec8c875f01685f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit7826e0a54338be7fa7ec8c875f01685f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit7826e0a54338be7fa7ec8c875f01685f::$classMap;
 
         }, null, ClassLoader::class);
     }
