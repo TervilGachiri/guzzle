@@ -8,6 +8,7 @@ use \RedBeanPHP\R as R; //import the RedBean class with an Alias
  define('DB_PASS', '');//**
  define('DB_NAME', 'class_db');
 
+ 
 
 //we are setting up ReadBean  - direct
 R::setup( "mysql:host=localhost;dbname=class_db", 
