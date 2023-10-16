@@ -75,6 +75,7 @@ require_once 'Database/Database.php';//setting up readbean
           * ['lname' =>'', 'fname' =>'',...]
           * ]
           */
+          
              $results =  R::find( 'staff', ' status=1 AND role="employee" ');
              foreach($results as $result);
               $lname = $row['lname'];
