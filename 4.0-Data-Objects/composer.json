@@ -1,6 +1,7 @@
 {
     "require": {
-        "gabordemooij/redbean": "dev-master"
+        "gabordemooij/redbean": "dev-master",
+        "propel/propel": "~2.0@beta"
     }
     
 }
