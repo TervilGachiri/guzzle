@@ -945,6 +945,7 @@ abstract class Staff implements ActiveRecordInterface
                     $this->doInsert($con);
                     $affectedRows += 1;
                 } else {
+                    
                     $affectedRows += $this->doUpdate($con);
                 }
                 $this->resetModified();
