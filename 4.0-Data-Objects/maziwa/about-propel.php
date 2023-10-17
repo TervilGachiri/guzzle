@@ -84,7 +84,6 @@ use Models\Base\StaffQuery;
                 <a href="<?=$director->getlinkedIn()?>"><i class="fa-brands fa-linkedin"></i></a>
 </div>
 
-
         <?php endforeach; ?>
       </section>
 
