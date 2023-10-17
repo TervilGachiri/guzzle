@@ -69,6 +69,7 @@ class Staff extends BaseStaff
         //return the joined string
         return $fNameProper;
     }
+    
 
     /**
      * This method returns a well formatted email address
