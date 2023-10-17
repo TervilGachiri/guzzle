@@ -77,10 +77,10 @@ use Models\Base\StaffQuery;
             --> 
             <div class="card">   
               <img src="images/<?=$director->getUserImage()?>" alt="<?=$director->getlname()?>" style="width:100%">    
-              <h1><?="@TODO"?></h1>  
+              <h1><?=$director->getFullName()?></h1>  
                <p class="title"><?=ucwords($director->getRole() )?></p>  
                <p>Since <?=$director->getEmploymentDate()?></p>  
-                <a href="mailto:<?=$director->getEmailAddress()?>"><i class="fa fa-envelope"></i></a>   
+                <a href="mailto:<?=$director->getSanitizedEmail()?>"><i class="fa fa-envelope"></i></a>   
                 <a href="<?=$director->getlinkedIn()?>"><i class="fa-brands fa-linkedin"></i></a>
 </div>
 
