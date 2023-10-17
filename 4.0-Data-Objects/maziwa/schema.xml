@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="default" defaultIdMethod="native" namespace="\Models" defaultPhpNamingMethod="underscore">
+  <table name="contact" idMethod="native" phpName="Contact">
+    <column name="id" phpName="Id" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="name" phpName="Name" type="VARCHAR" size="200"/>
+    <column name="email" phpName="Email" type="VARCHAR" size="200"/>
+    <column name="country" phpName="Country" type="VARCHAR" size="100"/>
+    <column name="contact_date" phpName="ContactDate" type="DATETIME"/>
+    <column name="message" phpName="Message" type="LONGVARCHAR"/>
+    <column name="phone" phpName="Phone" type="VARCHAR" size="20"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+  <table name="staff" idMethod="native" phpName="Staff">
+    <column name="id" phpName="Id" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+    <column name="lname" phpName="Lname" type="VARCHAR" size="100"/>
+    <column name="fname" phpName="Fname" type="VARCHAR" size="100"/>
+    <column name="short_bio" phpName="ShortBio" type="LONGVARCHAR"/>
+    <column name="user_image" phpName="UserImage" type="LONGVARCHAR"/>
+    <column name="linkedin" phpName="Linkedin" type="LONGVARCHAR"/>
+    <column name="email_address" phpName="EmailAddress" type="VARCHAR" size="100"/>
+    <column name="role" phpName="Role" type="VARCHAR" size="10"/>
+    <column name="employment_date" phpName="EmploymentDate" type="INTEGER" size="4"/>
+    <column name="status" phpName="Status" type="BOOLEAN" size="1" required="true" defaultValue="true"/>
+    <vendor type="mysql">
+      <parameter name="Engine" value="InnoDB"/>
+    </vendor>
+  </table>
+</database>
