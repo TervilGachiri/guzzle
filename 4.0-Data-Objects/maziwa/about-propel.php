@@ -86,6 +86,7 @@ use Models\Base\StaffQuery;
 
         <?php endforeach; ?>
       </section>
+      
 
       <section id="employees">
     
