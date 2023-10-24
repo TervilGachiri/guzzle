@@ -118,7 +118,7 @@ require_once 'Classloader.php';
                    
 
 
-              <?php  endforeach; 
+             
 
               //simulate getting all directors
               $directors =  new User\Director();
@@ -156,4 +156,4 @@ require_once 'Classloader.php';
 3. https://www.huhtamaki.com/globalassets/fiber-campaign-project-fresh/fresh-logo-3.png
 4.https://www.cleanpng.com/png-vector-graphics-clip-art-computer-icons-image-illu-6637584/download-png.html
 5. https://www.huhtamaki.com/globalassets/fiber-campaign-project-fresh/fresh-logo-3.png
-  -->
+      
