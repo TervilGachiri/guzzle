@@ -60,7 +60,7 @@ if (isset($_POST['submit']) && $_POST['submit'] == "submit") {
       //encode html entities
       $message = htmlentities($message);   
 
-      #sql = "INSERT INTO contact('name', 'email','country','contact_date','phone','message') 
+      $sql = "INSERT INTO contact('name', 'email','country','contact_date','phone','message') 
   VALUES('$name', '$email', '$country', '$today', '$phone', '$message');
 
         //echo $sql;/
