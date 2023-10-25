@@ -7,7 +7,7 @@ function loader($className){
      //before Database\Database
 
     // die($className1);// Database/Database.php
-     $filePath = $className1.'.php';
+     $filePath = $className.'.php';
      require_once $filePath;
 }
 
